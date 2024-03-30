@@ -1,5 +1,5 @@
 test_exists() {
-    echo "I exist";
+    echo "I exist"
 }
 
 populate_logs() {
@@ -66,4 +66,12 @@ new_proj() {
 
     # launch tex document in code
     code ./notes/main.tex
+}
+
+new_sess() {
+    sess="$1"
+    res="$2"
+    today=$(date +"%a %d %b %Y")
+    newline="|$today|$sess|$res|"
+    echo $newline >> README.md
 }
